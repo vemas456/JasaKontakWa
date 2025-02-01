@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilih Metode Pembayaran</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .container {
+            width: 350px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+        }
+        .payment-option {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        .payment-details {
+            display: none;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 10px;
+            background: #f9f9f9;
+        }
+        label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Pilih Metode Pembayaran</h2>
+        
+        <!-- Pilihan Metode Pembayaran -->
+        <div class="payment-option">
+            <input type="radio" name="payment" id="qris" onclick="document.getElementById('qris-info').style.display='block'; document.getElementById('bank-info').style.display='none';">
+            <label for="qris">QRIS</label>
+        </div>
+
+        <div class="payment-option">
+            <input type="radio" name="payment" id="bank" onclick="document.getElementById('bank-info').style.display='block'; document.getElementById('qris-info').style.display='none';">
+            <label for="bank">Transfer Bank</label>
+        </div>
+
+        <!-- Detail QRIS -->
+        <div id="qris-info" class="payment-details">
+            <h3>Bayar dengan QRIS</h3>
+            <p>Silakan scan QR Code berikut:</p>
+            <img src="https://via.placeholder.com/250" alt="QRIS Code">
+        </div>
+
+        <!-- Detail Transfer Bank -->
+        <div id="bank-info" class="payment-details">
+            <h3>Transfer ke Rekening</h3>
+            <p><strong>Bank BCA</strong>:1132378678 (V****P*****)</p>
+            <p><strong>Bank Dana</strong>: 085942943580 (V****P*****)</p>
+            <p>Setelah transfer, silakan kirim bukti transfer</p>
+            <p><a href="bukti.html" type="submit" style="background: #4CAF50; color: white; padding: 10px; width: 100%; ">kirim bukti transfer</a></p>
+        </div>
+           </div>
+</body>
+</html>
